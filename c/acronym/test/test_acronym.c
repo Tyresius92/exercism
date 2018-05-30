@@ -34,7 +34,6 @@ void test_basic_abbreviation(void)
 
 void test_lower_case_words(void)
 {
-   TEST_IGNORE();
    char *phrase = "Ruby on Rails";
    char *expected = "ROR";
    test_abbreviation(phrase, expected);
@@ -42,7 +41,6 @@ void test_lower_case_words(void)
 
 void test_punctuation(void)
 {
-   TEST_IGNORE();
    char *phrase = "First In, First Out";
    char *expected = "FIFO";
    test_abbreviation(phrase, expected);
@@ -50,7 +48,6 @@ void test_punctuation(void)
 
 void test_non_acronym_all_caps_words(void)
 {
-   TEST_IGNORE();
    char *phrase = "GNU Image Manipulation Program";
    char *expected = "GIMP";
    test_abbreviation(phrase, expected);
@@ -58,7 +55,6 @@ void test_non_acronym_all_caps_words(void)
 
 void test_hyphenated(void)
 {
-   TEST_IGNORE();
    char *phrase = "Complementary metal-oxide semiconductor";
    char *expected = "CMOS";
    test_abbreviation(phrase, expected);
@@ -66,7 +62,6 @@ void test_hyphenated(void)
 
 void test_all_caps_words(void)
 {
-   TEST_IGNORE();
    char *phrase = "PHP: Hypertext Preprocessor";
    char *expected = "PHP";
    test_abbreviation(phrase, expected);
@@ -74,7 +69,6 @@ void test_all_caps_words(void)
 
 void test_empty_string(void)
 {
-   TEST_IGNORE();
    char *phrase = "";
    char *expected = NULL;
    test_abbreviation(phrase, expected);
@@ -82,7 +76,6 @@ void test_empty_string(void)
 
 void test_all_words_starting_with_lowercase(void)
 {
-   TEST_IGNORE();
    char *phrase = "for what it's worth";
    char *expected = "FWIW";
    test_abbreviation(phrase, expected);
