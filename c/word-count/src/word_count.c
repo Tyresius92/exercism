@@ -1,6 +1,9 @@
 #include "word_count.h"
 #include <stdbool.h>
+#include <stdio.h>
 #include <string.h>
+
+#define NELEMS(A) sizeof(*A)/sizeof(A[0])
 
 bool is_separator(char check_me)
 {
@@ -20,14 +23,33 @@ int word_count(const char *input_text, word_count_word_t * words)
         char curr_word[MAX_WORD_LENGTH];
         char c; 
 
-        //int index = 0; 
+        int index = 0; 
         int num_words = 0; 
+        int j = 0;
+        bool found = false; 
 
-        for (int i = 0; i < strlen(input_text); i++){
-                int j = 0;
-                c = input_text[i];       
-        
- 
+        for (unsigned i = 0; i < strlen(input_text); i++){
+                c = input_text[i]; 
+                if (!is_separator(c)) {
+                        fprintf(stderr, "in here!\n"); 
+                        curr_word[j] = c; 
+                } else {
+                        for (unsigned k = 0; k < NELEMS(words); k++) {
+                                if (words[k].text == curr_word) {
+                                        found = true; 
+                                        break; 
+                                } 
+                        }
+                        if (found == false) {
+                                for (unsigned k = 0; k < strlen(curr_word); k++)
+                                        words[index].text[k] = curr_word[k]; 
+                        }
+                        words[index].count += 1; 
+                        num_words += 1; 
+                        index++; 
+                        j = 0; 
+                }
+
 
 
                 //if the word is not in the array yet
