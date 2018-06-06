@@ -1,0 +1,8 @@
+{
+  "word_count_test.py::WordCountTests::test_apostrophes": true,
+  "word_count_test.py::WordCountTests::test_cramped_list": true,
+  "word_count_test.py::WordCountTests::test_expanded_list": true,
+  "word_count_test.py::WordCountTests::test_ignores_punctuation": true,
+  "word_count_test.py::WordCountTests::test_non_alphanumeric": true,
+  "word_count_test.py::WordCountTests::test_quotations": true
+}
