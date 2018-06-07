@@ -1,24 +1,16 @@
-import re
-import string
-
-def hey(phrase):
-    shouting = re.compile(r'^[A-Z\d,\t\n!\.%^*@#$(*^ ]+$')
-    question = re.compile(r'.\?$')
-
-    phrase = phrase.lstrip().rstrip()
-
-    is_question = question.match(phrase)
+def hey(phrase):    
+    phrase = phrase.strip()
 
     if phrase == "":
         return "Fine. Be that way!"
-    
-    if shouting.match(phrase):
-        if is_question:
+
+    if phrase.endswith('?'):
+        if phrase.isupper():
             return "Calm down, I know what I'm doing!"
         else:
-            return "Whoa, chill out!"
-    else:
-        if is_question:
             return "Sure."
-
-    return "Whatever."
+    else:
+        if phrase.isupper():
+            return "Whoa, chill out!"
+        else:
+            return "Whatever."
