@@ -1,0 +1,15 @@
+[
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_combination",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_decode_empty_string",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_decode_lower_case_string",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_decode_multiple_whitespace_mixed_in_string",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_decode_single_characters_only",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_decode_single_characters_with_repeated_characters",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_decode_string_with_no_single_characters",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_encode_empty_string",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_encode_lowercase_characters",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_encode_multiple_whitespace_mixed_in_string",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_encode_single_characters_mixed_with_repeated_characters",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_encode_single_characters_only_are_encoded_without_count",
+  "run_length_encoding_test.py::RunLengthEncodingTests::test_encode_string_with_no_single_characters"
+]
