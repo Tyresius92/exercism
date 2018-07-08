@@ -3,9 +3,6 @@
 
 int get_week_start_date(int year, int month, char *which) 
 {
-        (void) year;
-        (void) month; 
-
         if (strcmp(which, "first") == 0)
                 return 1; 
         else if (strcmp(which, "second") == 0)

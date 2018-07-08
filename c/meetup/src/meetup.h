@@ -7,7 +7,6 @@
 
 int get_week_start_date(int year, int month, char *which);
 int days_in_month(int year, int month);
-
 int meetup_day_of_month(int year, int month, char *which, char *day); 
 
 #endif
