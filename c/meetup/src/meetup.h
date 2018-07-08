@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <time.h>
 
-time_t first_day_of_month(int year, int month); 
+int get_week_start_date(int year, int month, char *which);
+int days_in_month(int year, int month);
 
 int meetup_day_of_month(int year, int month, char *which, char *day); 
 
