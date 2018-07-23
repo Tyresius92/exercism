@@ -29,36 +29,43 @@ void test_transcribes_G_to_C(void)
 
 void test_transcribes_C_to_G(void)
 {
+                  // delete this line to run test
    test_transcription("C", "G");
 }
 
 void test_transcribes_T_to_A(void)
 {
+   
    test_transcription("T", "A");
 }
 
 void test_transcribes_A_to_U(void)
 {
+   
    test_transcription("A", "U");
 }
 
 void test_transcribes_all_occurrences(void)
 {
+   
    test_transcription("ACGTGGTCTTAA", "UGCACCAGAAUU");
 }
 
 void test_handle_invalid_nucleotide(void)
 {
+   
    test_failure("U");
 }
 
 void test_handle_completely_invalid_input(void)
 {
+   
    test_failure("XXX");
 }
 
 void test_handle_partially_invalid_input(void)
 {
+   
    test_failure("ACGTXXXCTTAA");
 }
 
