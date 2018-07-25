@@ -1,0 +1,11 @@
+[
+  "space_age_test.py::SpaceAgeTest::test_age_in_seconds",
+  "space_age_test.py::SpaceAgeTest::test_age_on_earth",
+  "space_age_test.py::SpaceAgeTest::test_age_on_jupiter",
+  "space_age_test.py::SpaceAgeTest::test_age_on_mars",
+  "space_age_test.py::SpaceAgeTest::test_age_on_mercury",
+  "space_age_test.py::SpaceAgeTest::test_age_on_neptune",
+  "space_age_test.py::SpaceAgeTest::test_age_on_saturn",
+  "space_age_test.py::SpaceAgeTest::test_age_on_uranus",
+  "space_age_test.py::SpaceAgeTest::test_age_on_venus"
+]
