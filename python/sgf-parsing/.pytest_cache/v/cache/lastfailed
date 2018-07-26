@@ -1,0 +1,10 @@
+{
+  "sgf_parsing_test.py::SgfParsingTest::test_all_lowercase_property": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_escaped_property": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_multiple_property_values": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_properties_without_delimiter": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_single_node_tree": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_two_child_trees": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_two_nodes": true,
+  "sgf_parsing_test.py::SgfParsingTest::test_upper_and_lowercase_property": true
+}
