@@ -1,0 +1,9 @@
+[
+  "prime_factors_test.py::PrimeFactorsTest::test_cube_of_a_prime",
+  "prime_factors_test.py::PrimeFactorsTest::test_factors_include_a_large_prime",
+  "prime_factors_test.py::PrimeFactorsTest::test_no_factors",
+  "prime_factors_test.py::PrimeFactorsTest::test_prime_number",
+  "prime_factors_test.py::PrimeFactorsTest::test_product_of_primes",
+  "prime_factors_test.py::PrimeFactorsTest::test_product_of_primes_and_non_primes",
+  "prime_factors_test.py::PrimeFactorsTest::test_square_of_a_prime"
+]

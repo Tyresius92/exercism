@@ -29,6 +29,8 @@ def parse(input_string):
     if not input_string.startswith('(;') or not input_string.endswith(')'):
         raise ValueError("input_string formatted incorrectly.")
 
+    
+
     dummy = SgfTree(None, None)
 
     return dummy
