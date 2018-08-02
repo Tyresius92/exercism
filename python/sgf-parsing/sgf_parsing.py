@@ -1,3 +1,5 @@
+import re
+
 class SgfTree(object):
     def __init__(self, properties=None, children=None):
         self.properties = properties or {}
@@ -29,8 +31,10 @@ def parse(input_string):
     if not input_string.startswith('(;') or not input_string.endswith(')'):
         raise ValueError("input_string formatted incorrectly.")
 
-    
+    matches = re.match(r'\(\;[A-Z](\[[a-z]\])+\)+', input_string)
 
+    print(matches)
+    
     dummy = SgfTree(None, None)
 
     return dummy
