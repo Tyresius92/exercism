@@ -1,0 +1,13 @@
+[
+  "scrabble_score_test.py::ScrabbleScoreTest::test_empty_input",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_english_like_word",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_entire_alphabet_available",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_long_mixed_case_word",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_lowercase_letter",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_medium_valuable_word",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_medium_word",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_short_valuable_word",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_short_word",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_uppercase_letter",
+  "scrabble_score_test.py::ScrabbleScoreTest::test_valuable_letter"
+]
