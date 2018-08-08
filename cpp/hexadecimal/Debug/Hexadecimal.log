@@ -1,0 +1,3 @@
+﻿  hexadecimal.cpp
+c:\users\pclayt01\documents\github\exercism\cpp\hexadecimal\hexadecimal.cpp(8): warning C4018: '<': signed/unsigned mismatch
+  Hexadecimal.vcxproj -> C:\Users\PCLAYT01\Documents\GitHub\exercism\cpp\hexadecimal\Debug\Hexadecimal.exe
