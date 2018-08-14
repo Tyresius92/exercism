@@ -1,18 +1,14 @@
 #include "nucleotide_count.h"
 
-char *EMPTY_STRING = ""; 
-
 char *count(const char *dna_strand)
 {
-        if (dna_strand == NULL || dna_strand == EMPTY_STRING)
-                return ""; 
 
-        char result[30]; 
+        char *result = calloc(30, sizeof(char)); 
         int a = 0; 
         int g = 0; 
         int t = 0; 
         int c = 0; 
-
+                
         for (unsigned i = 0; i < strlen(dna_strand); i++) {
                 switch (dna_strand[i]) {
                         case 'A': 
@@ -28,7 +24,7 @@ char *count(const char *dna_strand)
                                 c++; 
                                 break; 
                         default:
-                                return ""; 
+                                return result; // all nulls
                 }
         }
 
