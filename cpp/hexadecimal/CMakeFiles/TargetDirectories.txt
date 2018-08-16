@@ -1,0 +1,3 @@
+/home/tyrel/learnCoding/exercism/cpp/hexadecimal/CMakeFiles/rebuild_cache.dir
+/home/tyrel/learnCoding/exercism/cpp/hexadecimal/CMakeFiles/edit_cache.dir
+/home/tyrel/learnCoding/exercism/cpp/hexadecimal/CMakeFiles/hexadecimal.dir
