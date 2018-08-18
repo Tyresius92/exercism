@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TwoferTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-08-18T15:08:55" hostname="tyrel-Inspiron-11-3168" time="0.012">
+  <properties/>
+  <testcase name="noNameGiven" classname="TwoferTest" time="0.003"/>
+  <testcase name="aNameGiven" classname="TwoferTest" time="0.002"/>
+  <testcase name="anotherNameGiven" classname="TwoferTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GreeterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-18T15:00:30" hostname="tyrel-Inspiron-11-3168" time="0.005">
+  <properties/>
+  <testcase name="testThatGreeterReturnsTheCorrectGreeting" classname="GreeterTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
