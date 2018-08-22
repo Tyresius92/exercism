@@ -1,0 +1,3 @@
+/home/tyrel/learnCoding/exercism/cpp/gigasecond/build/CMakeFiles/rebuild_cache.dir
+/home/tyrel/learnCoding/exercism/cpp/gigasecond/build/CMakeFiles/edit_cache.dir
+/home/tyrel/learnCoding/exercism/cpp/gigasecond/build/CMakeFiles/gigasecond.dir

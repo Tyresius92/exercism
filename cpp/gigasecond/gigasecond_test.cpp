@@ -15,7 +15,6 @@ BOOST_AUTO_TEST_CASE(test_1)
     BOOST_REQUIRE_EQUAL(expected, actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(test_2)
 {
     const auto actual = gigasecond::advance(time_from_string("1977-06-13 00:00:00"));
@@ -47,4 +46,3 @@ BOOST_AUTO_TEST_CASE(test_5)
     const ptime expected(time_from_string("2046-10-03 01:46:39"));
     BOOST_REQUIRE_EQUAL(expected, actual);
 }
-#endif

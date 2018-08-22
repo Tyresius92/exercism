@@ -1,0 +1,1 @@
+/usr/bin/c++  -std=c++11  -rdynamic CMakeFiles/gigasecond.dir/gigasecond_test.cpp.o CMakeFiles/gigasecond.dir/gigasecond.cpp.o  -o gigasecond /usr/local/boost_1_59_0/stage/lib/libboost_unit_test_framework.a /usr/local/boost_1_59_0/stage/lib/libboost_date_time.a /usr/local/boost_1_59_0/stage/lib/libboost_regex.a 
