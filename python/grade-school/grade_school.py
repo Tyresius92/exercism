@@ -7,9 +7,19 @@ class School(object):
             self.all[grade] = [name]
         else:
             self.all[grade].append(name)
+            self.all[grade].sort()
 
     def roster(self):
-        return sorted(self.all.values())
+        list_of_lists = self.all.values()
+        result = []
+        for grade_list in list_of_lists:
+            for student in grade_list:
+                result.append(student)
+
+        return result
 
     def grade(self, grade_number):
-        pass
+        if grade_number in self.all: 
+            return self.all[grade_number]
+        else:
+            return []
