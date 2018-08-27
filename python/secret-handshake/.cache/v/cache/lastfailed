@@ -1,0 +1,9 @@
+{
+  "secret_handshake_test.py::SecretHandshakeTest::test_code1": true, 
+  "secret_handshake_test.py::SecretHandshakeTest::test_code2": true, 
+  "secret_handshake_test.py::SecretHandshakeTest::test_code3": true, 
+  "secret_handshake_test.py::SecretHandshakeTest::test_reversible1": true, 
+  "secret_handshake_test.py::SecretHandshakeTest::test_reversible2": true, 
+  "secret_handshake_test.py::SecretHandshakeTest::test_reversible3": true, 
+  "secret_handshake_test.py::SecretHandshakeTest::test_reversible4": true
+}

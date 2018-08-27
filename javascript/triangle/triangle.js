@@ -5,7 +5,8 @@ var Triangle = function (s1, s2, s3) {
 };
 
 Triangle.prototype.kind = function () {
-        if (this.s1 + this.s2 < this.s3 || this.s1 + this.s3 < this.s2 || 
+        if (this.s1 + this.s2 < this.s3 || 
+            this.s1 + this.s3 < this.s2 || 
             this.s2 + this.s3 < this.s1) {
                 throw Error; 
         }
