@@ -10,11 +10,10 @@ class School(object):
             self.all[grade].sort()
 
     def roster(self):
-        list_of_lists = self.all.values()
+        key_list = sorted(self.all.keys())
         result = []
-        for grade_list in list_of_lists:
-            for student in grade_list:
-                result.append(student)
+        for key in key_list:
+            result += self.all[key]
 
         return result
 
