@@ -1,0 +1,17 @@
+[
+  "minesweeper_test.py::MinesweeperTest::test_board9",
+  "minesweeper_test.py::MinesweeperTest::test_board_with_only_mines",
+  "minesweeper_test.py::MinesweeperTest::test_cross",
+  "minesweeper_test.py::MinesweeperTest::test_different_len",
+  "minesweeper_test.py::MinesweeperTest::test_horizontal_line",
+  "minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges",
+  "minesweeper_test.py::MinesweeperTest::test_invalid_char",
+  "minesweeper_test.py::MinesweeperTest::test_large_board",
+  "minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces",
+  "minesweeper_test.py::MinesweeperTest::test_no_columns",
+  "minesweeper_test.py::MinesweeperTest::test_no_mines",
+  "minesweeper_test.py::MinesweeperTest::test_no_rows",
+  "minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines",
+  "minesweeper_test.py::MinesweeperTest::test_vertical_line",
+  "minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges"
+]
