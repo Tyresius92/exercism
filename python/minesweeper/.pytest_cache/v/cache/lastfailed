@@ -1,18 +1,1 @@
-{
-  "minesweeper_test.py::MinesweeperTest": true,
-  "minesweeper_test.py::MinesweeperTest::test_board9": true,
-  "minesweeper_test.py::MinesweeperTest::test_board_with_only_mines": true,
-  "minesweeper_test.py::MinesweeperTest::test_cross": true,
-  "minesweeper_test.py::MinesweeperTest::test_different_len": true,
-  "minesweeper_test.py::MinesweeperTest::test_horizontal_line": true,
-  "minesweeper_test.py::MinesweeperTest::test_horizontal_line_mines_at_edges": true,
-  "minesweeper_test.py::MinesweeperTest::test_invalid_char": true,
-  "minesweeper_test.py::MinesweeperTest::test_large_board": true,
-  "minesweeper_test.py::MinesweeperTest::test_mine_surrounded_by_spaces": true,
-  "minesweeper_test.py::MinesweeperTest::test_no_columns": true,
-  "minesweeper_test.py::MinesweeperTest::test_no_mines": true,
-  "minesweeper_test.py::MinesweeperTest::test_no_rows": true,
-  "minesweeper_test.py::MinesweeperTest::test_space_surrounded_by_mines": true,
-  "minesweeper_test.py::MinesweeperTest::test_vertical_line": true,
-  "minesweeper_test.py::MinesweeperTest::test_vertical_line_mines_at_edges": true
-}
+{}
