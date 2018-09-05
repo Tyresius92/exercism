@@ -1,3 +1,0 @@
-/home/tyrel/learnCoding/exercism/cpp/hello-world/CMakeFiles/rebuild_cache.dir
-/home/tyrel/learnCoding/exercism/cpp/hello-world/CMakeFiles/edit_cache.dir
-/home/tyrel/learnCoding/exercism/cpp/hello-world/CMakeFiles/hello-world.dir
