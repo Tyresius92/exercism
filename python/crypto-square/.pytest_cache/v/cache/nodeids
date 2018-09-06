@@ -1,0 +1,9 @@
+[
+  "crypto_square_test.py::CryptoSquareTest::test_54chars_results_7chunks_2ending_space",
+  "crypto_square_test.py::CryptoSquareTest::test_8chars_results_3chunks_ending_space",
+  "crypto_square_test.py::CryptoSquareTest::test_9chars_results_3chunks",
+  "crypto_square_test.py::CryptoSquareTest::test_empty_string",
+  "crypto_square_test.py::CryptoSquareTest::test_lowercase",
+  "crypto_square_test.py::CryptoSquareTest::test_remove_punctuation",
+  "crypto_square_test.py::CryptoSquareTest::test_remove_spaces"
+]
