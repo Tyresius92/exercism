@@ -1,0 +1,6 @@
+{
+  "tree_building_test.py::TreeBuildingTest::test_cycle_directly": true,
+  "tree_building_test.py::TreeBuildingTest::test_cycle_indirectly": true,
+  "tree_building_test.py::TreeBuildingTest::test_higher_id_parent_of_lower_id": true,
+  "tree_building_test.py::TreeBuildingTest::test_root_node_has_parent": true
+}
