@@ -1,3 +1,0 @@
-/home/tyrel/learnCoding/exercism/cpp/space-age/build/CMakeFiles/rebuild_cache.dir
-/home/tyrel/learnCoding/exercism/cpp/space-age/build/CMakeFiles/space-age.dir
-/home/tyrel/learnCoding/exercism/cpp/space-age/build/CMakeFiles/edit_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11  -rdynamic CMakeFiles/space-age.dir/space_age_test.cpp.o  -o space-age /usr/local/boost_1_59_0/stage/lib/libboost_unit_test_framework.a /usr/local/boost_1_59_0/stage/lib/libboost_date_time.a /usr/local/boost_1_59_0/stage/lib/libboost_regex.a 

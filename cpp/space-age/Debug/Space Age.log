@@ -1,4 +1,0 @@
-﻿  space_age.cpp
-feature_tests.obj : error LNK2005: _main already defined in CMakeCXXCompilerId.obj
-space_age_test.obj : error LNK2005: _main already defined in CMakeCXXCompilerId.obj
-C:\Users\PCLAYT01\Documents\GitHub\exercism\cpp\space-age\Debug\Space Age.exe : fatal error LNK1169: one or more multiply defined symbols found
