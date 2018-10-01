@@ -1,4 +1,7 @@
 */.vs
 */CMakeFiles/
 *.sln
-*.vcxproj*
+*.vcxproj
+*.obj
+*.log
+*.tlog
