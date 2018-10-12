@@ -1,8 +1,5 @@
 #include "space_age.h"
 
-//debug
-#include <iostream>
-
 const double SECS_PER_EARTH_YEAR = 31557600.0; 
 const double EARTH_YEARS_PER_MERCURY_YEAR = 0.2408467; 
 const double EARTH_YEARS_PER_VENUS_YEAR = 0.61519726;
@@ -12,7 +9,7 @@ const double EARTH_YEARS_PER_SATURN_YEAR = 29.447498;
 const double EARTH_YEARS_PER_URANUS_YEAR = 84.016846;
 const double EARTH_YEARS_PER_NEPTUNE_YEAR = 164.79132;
 
-space_age::space_age::space_age(unsigned long long seconds)
+explicit space_age::space_age::space_age(unsigned long long seconds)
 {
 	age_in_seconds = seconds; 
 }; 
@@ -24,8 +21,6 @@ unsigned long long space_age::space_age::seconds() const
 
 double space_age::space_age::on_earth() const
 {
-        std::cout << seconds() / SECS_PER_EARTH_YEAR;
-
         return seconds() / SECS_PER_EARTH_YEAR;
 }
 
