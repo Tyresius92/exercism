@@ -1,21 +1,21 @@
 #include "grains.h"
 
-unsigned long long grains::square(unsigned sq_num)
+uint64_t grains::square(unsigned sq_num)
 {
         if (sq_num <= 0 || sq_num > 64) {
                 throw "Square number out of range!";
         }
 
-        unsigned long long grains = 1; 
+        uint64_t grains = 1;
 
-        grains = grains << sq_num - 1; //equivalent to 2^(sq_num - 1)
+        grains = grains << (sq_num - 1); //equivalent to 2^(sq_num - 1)
 
         return grains; 
 }
 
-unsigned long long grains::total()
+uint64_t grains::total()
 {
-        unsigned long long total = 0; 
+        uint64_t total = 0;
 
         for (int i = 1; i < 65; i++) {
                 total += square(i); 

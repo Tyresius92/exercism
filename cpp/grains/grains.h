@@ -1,8 +1,10 @@
 #pragma once
 
+#include <cstdint>
+
 namespace grains {
 
-        unsigned long long square(unsigned num);
+        uint64_t square(unsigned num);
 
-        unsigned long long total(); 
+        uint64_t total(); 
 }
