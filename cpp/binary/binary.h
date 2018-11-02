@@ -4,5 +4,5 @@
 
 namespace binary
 {
-        int convert(std::string bin); 
+        int convert(const std::string& bin); 
 }

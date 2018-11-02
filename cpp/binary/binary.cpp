@@ -1,12 +1,12 @@
 #include "binary.h"
 
-int binary::convert(std::string bin)
+int binary::convert(const std::string& bin)
 {
         int result = 0; 
         int power = 1; 
 
-        for (int i = 0; i < bin.length(); i++) {
-                char c = bin[bin.length() - (i + 1)]; 
+        for (int i = bin.length(); i > 0; i--) {
+                char c = bin[i - 1]; 
 
                 if (c != '0' && c != '1') {
                         return 0;
