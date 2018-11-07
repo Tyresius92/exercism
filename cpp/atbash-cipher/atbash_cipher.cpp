@@ -15,15 +15,15 @@ std::string normalize_string(std::string input) {
 }
 
 char getAtbashCharacter(char c) {
-        if (isdigit(c)) {
-                return c;
-        }
-        else if (isalpha(c)) {
+        if (isalpha(c)) {
                 int offset_from_a = c - 'a';
                 return ('z' - offset_from_a);
         }
-        else {
+        else if (isdigit(c)) {
                 return c; 
+        }
+        else {
+                throw std::domain_error("Invalid character"); 
         }
 }
 

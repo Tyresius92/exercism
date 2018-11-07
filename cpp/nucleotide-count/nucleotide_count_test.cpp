@@ -14,7 +14,7 @@ BOOST_AUTO_TEST_CASE(has_no_nucleotides)
     BOOST_TEST(expected == actual);
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
+
 BOOST_AUTO_TEST_CASE(has_no_adenosine)
 {
     const dna::counter dna("");
@@ -76,4 +76,4 @@ BOOST_AUTO_TEST_CASE(counts_all_nucleotides)
 
     BOOST_TEST(expected == actual);
 }
-#endif
+

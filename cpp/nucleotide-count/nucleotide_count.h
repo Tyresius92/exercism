@@ -2,17 +2,17 @@
 
 #include <string>
 #include <map>
+#include <stdexcept>
 
 namespace dna {
         class counter {
         public:
-                counter(std::string const& strand) {}
+                counter(std::string const& strand);
 
-                std::map<char, int> const& nucleotide_counts() const {
-                        std::map<char, int> data{ { 'A', 0 },{ 'T', 0 },{ 'C', 0 },{ 'G', 0 } };
+                std::map<char, int> const& nucleotide_counts() const;
 
-                        return data; 
-                }
+                int count(char nucleotide) const;
+
         private: 
                 std::map<char, int> counts_;
 

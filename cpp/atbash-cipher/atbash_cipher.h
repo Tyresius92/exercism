@@ -2,6 +2,7 @@
 
 #include <string>
 #include <algorithm>
+#include <exception>
 
 namespace atbash {
         std::string encode(std::string input);

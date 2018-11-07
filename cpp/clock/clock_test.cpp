@@ -182,7 +182,6 @@ BOOST_AUTO_TEST_CASE(time_tests)
     }
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(add_tests)
 {
     for (addTest a : addCases) {
@@ -205,4 +204,3 @@ BOOST_AUTO_TEST_CASE(equal_tests)
                     "[" << string(clock1) << " == " << string(clock2) << "] test case: " << e.msg);
     }
 }
-#endif

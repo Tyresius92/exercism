@@ -23,8 +23,8 @@ std::string transcription::to_rna(std::string strand)
 {
         std::string result = "";
 
-        for (int i = 0; i < strand.length(); i++) {
-                result += to_rna(strand[i]); // this is the char version of to_rna
+        for (char nucleotide : strand) {
+                result += to_rna(nucleotide); // this is the char version of to_rna
         }
 
         return result; 

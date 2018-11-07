@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{8867B7AC-C069-4F9F-B1DD-45162F0E67B7}</ProjectGuid>
+    <ProjectGuid>{AECE409F-412D-4A58-BE99-AA6189F475BC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -99,11 +99,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sum_of_multiples.cpp" />
-    <ClCompile Include="sum_of_multiples_test.cpp" />
+    <ClCompile Include="bracket_push.cpp" />
+    <ClCompile Include="bracket_push_test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sum_of_multiples.h" />
+    <ClInclude Include="bracket_push.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

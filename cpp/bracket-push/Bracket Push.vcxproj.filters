@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sum_of_multiples_test.cpp">
+    <ClCompile Include="bracket_push_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sum_of_multiples.cpp">
+    <ClCompile Include="bracket_push.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sum_of_multiples.h">
+    <ClInclude Include="bracket_push.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
