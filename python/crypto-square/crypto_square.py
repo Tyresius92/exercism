@@ -1,18 +1,20 @@
 from math import sqrt
 
 def encode(plain_text):
-    result = ''
     stripped = normalize_text(plain_text)
 
     row, col = get_crypto_square_dimensions(stripped)
 
     stripped = add_trailing_spaces(stripped, row, col)
 
+    rows = []
     for i in range(col):
-        if i != 0:
-            result = result + ' '
+        letters = []
         for j in range(i, len(stripped), col):
-            result = result + stripped[j]
+            letters.append(stripped[j])
+        rows.append(''.join(c for c in letters))
+
+    result = ' '.join(word for word in rows)
 
     return result
 
@@ -21,18 +23,18 @@ def normalize_text(plain_text):
     return result
 
 def get_crypto_square_dimensions(text):
-    row = int(sqrt(len(text)))
-    col = row
+    root = sqrt(len(text))
 
-    while row * col < len(text):
-        col += 1
-        if row * col < len(text):
-            row += 1
+    row = int(round(root))
+    
+    if row - root < 0: # rounded down
+        col = row + 1
+    else:              # rounded up
+        col = row
 
     return row, col
 
 def add_trailing_spaces(text, row, col):
-    while len(text) < row * col:
-        text = text + ' '
+    text = text.ljust(row * col)
 
     return text

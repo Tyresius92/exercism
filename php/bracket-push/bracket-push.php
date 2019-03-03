@@ -9,10 +9,13 @@ function brackets_match(string $input) {
 
 	$stack = array();
 
+	$keys = array_keys($dict);
+	$values = array_values($dict);
+
 	for ($i = 0; $i < strlen($input); $i++) {
-		if (in_array($input[$i], array_keys($dict))) {
+		if (in_array($input[$i], $keys)) {
 			array_push($stack, $input[$i]);
-		} elseif (in_array($input[$i], array_values($dict))) {
+		} elseif (in_array($input[$i], $values)) {
 			if (!$stack) {
 				return false;
 			}
