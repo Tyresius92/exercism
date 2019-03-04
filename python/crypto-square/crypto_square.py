@@ -1,11 +1,12 @@
-from math import sqrt
+from math import sqrt, floor
 
 def encode(plain_text):
     stripped = normalize_text(plain_text)
 
     row, col = get_crypto_square_dimensions(stripped)
 
-    stripped = add_trailing_spaces(stripped, row, col)
+    # add trailing spaces
+    stripped = stripped.ljust(row * col)
 
     rows = []
     for i in range(col):
@@ -19,8 +20,7 @@ def encode(plain_text):
     return result
 
 def normalize_text(plain_text):
-    result = ''.join(c for c in plain_text.lower() if c.isalnum())
-    return result
+    return ''.join(c for c in plain_text.lower() if c.isalnum())
 
 def get_crypto_square_dimensions(text):
     root = sqrt(len(text))
@@ -35,6 +35,4 @@ def get_crypto_square_dimensions(text):
     return row, col
 
 def add_trailing_spaces(text, row, col):
-    text = text.ljust(row * col)
-
-    return text
+    return text.ljust(row * col)
