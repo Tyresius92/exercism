@@ -1,5 +1,2 @@
-def two_fer(name=None):
-    if name == None:
-    	name = "you";
-
+def two_fer(name="you"):
     return "One for " + name + ", one for me."
