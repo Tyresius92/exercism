@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 
-void clear_word_struct(word_count_word_t * words)
+void clear_word_struct(word_count_word_t *words)
 {
         for (unsigned i = 0; i < MAX_WORDS; i++) {
                 words[i].count = 0; 
@@ -15,40 +15,65 @@ void clear_word_struct(word_count_word_t * words)
         }
 }
 
-int insert_word_to_struct(char *curr_word, word_count_word_t * words, 
-                          unsigned max_index)
+bool is_empty_word(char *word) 
 {
-        if (curr_word[0] == '\0') {
-                return -1; 
-        }
+        return (word[0] == '\0');
+}
 
+void convert_word_to_lower(char *word) 
+{
         for (unsigned i = 0; i < MAX_WORD_LENGTH; i++) {
-                curr_word[i] = tolower(curr_word[i]); 
+                word[i] = tolower(word[i]); 
         }
+}
 
+int determine_word_index(char *word, word_count_word_t *words, 
+                         unsigned max_index) 
+{
         for (unsigned i = 0; i < max_index; i++) {
-                if (!strcmp(words[i].text, curr_word)) {
-                        words[i].count += 1; 
+                if (!strcmp(words[i].text, word)) {
                         return i; 
                 }
         }
 
-        for (unsigned i = 0; i < MAX_WORD_LENGTH; i++) {
-                words[max_index].text[i] = curr_word[i]; 
-        }
-        
-        words[max_index].count = 1; 
-        return max_index; 
+        return -1;
 }
 
-int isvalid(const char *input_text, int index) 
+int insert_word_to_struct(char *curr_word, word_count_word_t *words, 
+                          unsigned max_index)
+{
+        if (is_empty_word(curr_word)) {
+                return -1; 
+        }
+
+        convert_word_to_lower(curr_word);
+
+        int index = determine_word_index(curr_word, words, max_index); 
+
+        if (index == -1) {
+                // word not found, so insert to struct
+                for (unsigned i = 0; i < MAX_WORD_LENGTH; i++) {
+                        words[max_index].text[i] = curr_word[i]; 
+                }
+
+                words[max_index].count = 1; 
+                return max_index; 
+        } else {
+                // increment the word count at the correct index
+                words[index].count += 1;
+                return index;
+        }
+}
+
+int is_valid(const char *input_text, int index) 
 {
         if (isalpha(input_text[index]) || isdigit(input_text[index])) {
                 return true; 
         }
         if (input_text[index] == '\'') {
-                if (isalpha(input_text[index - 1]) && 
-                    isalpha(input_text[index + 1])) {
+                // check if apostrophe is inside a word
+                if (isalpha(input_text[index - 1]) 
+                    && isalpha(input_text[index + 1])) {
                         return true; 
                 }
         }
@@ -56,47 +81,53 @@ int isvalid(const char *input_text, int index)
         return false; 
 }
 
-int word_count(const char *input_text, word_count_word_t * words)
+void clear_word(char *word) 
 {
+        for (unsigned i = 0; i < MAX_WORD_LENGTH; i++) {
+                word[i] = '\0'; 
+        }
+}
 
+int word_count(const char *input_text, word_count_word_t *words)
+{
         clear_word_struct(words); 
 
-        int num_words = 0; 
         int put_at = 0; 
-        int index = 0; 
-        char *curr_word = calloc(MAX_WORD_LENGTH, sizeof(char)); 
-        int j = 0; 
+        int num_words = 0; 
+
+        // calloc room for one extra byte for \0 terminator
+        char *curr_word = calloc(MAX_WORD_LENGTH + 1, sizeof(char)); 
+        int index_in_word = 0; 
 
         for (unsigned i = 0; i < strlen(input_text); i++) {
-                if (isvalid(input_text, i)) {
-                        if (j == MAX_WORD_LENGTH) {
+                if (is_valid(input_text, i)) {
+                        if (index_in_word == MAX_WORD_LENGTH) {
+                                free(curr_word);
                                 return EXCESSIVE_LENGTH_WORD; 
                         }
 
-                        curr_word[j] = input_text[i]; 
-                        j++; 
+                        curr_word[index_in_word] = input_text[i]; 
+                        index_in_word++; 
                 } else {
-                        put_at = insert_word_to_struct(curr_word, words, index);
-                        if (put_at == index) {
-                                num_words++;
-                                index++; 
-                                if (index > MAX_WORDS) {
+                        put_at = insert_word_to_struct(curr_word, words, num_words);
+                        if (put_at == num_words) {
+                                num_words++; 
+                                if (num_words > MAX_WORDS) {
+                                        free(curr_word);
                                         return EXCESSIVE_NUMBER_OF_WORDS; 
                                 }
                         }
 
-                        j = 0; 
-                        for (unsigned k = 0; k < MAX_WORD_LENGTH; k++) {
-                                curr_word[k] = '\0'; 
-                        }
+                        index_in_word = 0; 
+                        clear_word(curr_word);
                 }
         }
 
-        put_at = insert_word_to_struct(curr_word, words, index);
-        if (put_at == index) {
-                num_words++;
-                index++; 
-                if (index > MAX_WORDS) {
+        put_at = insert_word_to_struct(curr_word, words, num_words);
+        if (put_at == num_words) {
+                num_words++; 
+                if (num_words > MAX_WORDS) {
+                        free(curr_word);
                         return EXCESSIVE_NUMBER_OF_WORDS; 
                 }
         }
