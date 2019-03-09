@@ -1,5 +1,5 @@
 var Transcriptor = function () {
-
+        
 };
 
 Transcriptor.prototype.toRna = function (orig) {
