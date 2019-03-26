@@ -1,23 +1,18 @@
 <?php
 
+const RNA_COMPLEMENTS = [
+    'G' => 'C',
+    'C' => 'G',
+    'T' => 'A',
+    'A' => 'U'
+];
+
 function rnaComplement(string $input) {
-    if ($input === "C") {
-        return "G";
-    } else if ($input === "G") {
-        return "C";
-    } else if ($input === "T") {
-        return "A";
-    } else if ($input === "A") {
-        return "U";
-    }
+    return RNA_COMPLEMENTS[$input];
 }
 
 function toRna(string $input) {
-    $complements = array();
-
-    for ($i = 0; $i < strlen($input); $i++) {
-        array_push($complements, rnaComplement($input[$i]));
-    }
+    $complements = array_map("rnaComplement", str_split($input));
 
     return join("", $complements); 
 }

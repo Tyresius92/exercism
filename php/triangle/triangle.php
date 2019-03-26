@@ -23,11 +23,11 @@ class Triangle
             throw new Exception("This is not a valid triangle.");
         }
 
-        if ($this->a === $this->b && $this->b === $this->c) {
+        if ($sides[0] === $sides[2]) {
             return "equilateral";
         }
 
-        if ($this->a === $this->b || $this->a === $this->c || $this->b === $this->c) {
+        if ($sides[0] === $sides[1] || $sides[1] === $sides[2]) {
             return "isosceles";
         }
 
