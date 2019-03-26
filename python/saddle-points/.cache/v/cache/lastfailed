@@ -1,11 +1,1 @@
-{
-  "saddle_points_test.py::SaddlePointsTest::test_empty_matrix_has_no_saddle_points": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_identify_multiple_saddle_points_in_column": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_identify_multiple_saddle_points_in_row": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_identify_saddle_point_in_bottom_right_corner": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_identify_single_saddle_point": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_irregular_matrix": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_non_square_matrix_with_2_saddle_points": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_single_column_matrix_has_saddle_point_min_value": true, 
-  "saddle_points_test.py::SaddlePointsTest::test_single_row_matrix_has_saddle_point_in_max_value": true
-}
+{}
