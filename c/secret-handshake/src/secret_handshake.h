@@ -2,6 +2,7 @@
 #define SECRET_HANDSHAKE_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 
 const char **commands(int code); 
 
