@@ -5,7 +5,7 @@ export const solve = (x, y) => {
 
   const distanceFromOrigin = Math.sqrt(x * x + y * y);
 
-  if (distanceFromOrigin === 0) {
+  if (distanceFromOrigin <= 1) {
     return 10;
   }
 
