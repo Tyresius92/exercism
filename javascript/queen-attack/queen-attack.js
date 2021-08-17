@@ -1,22 +1,31 @@
-class Queens {
-  constructor(obj = { white: [0, 3], black: [7, 3] }) {
-    if (obj.white[0] === obj.black[0] && obj.white[1] === obj.black[1]) {
+export class QueenAttack {
+  constructor({ white = [7, 3], black = [0, 3] } = {}) {
+    if (this._isSamePosition(white, black)) {
       throw "Queens cannot share the same space";
+    } else if (!this._isOnBoard(white) || !this._isOnBoard(black)) {
+      throw "Queen must be placed on the board";
     }
 
-    this.white = obj.white;
-    this.black = obj.black;
+    this.white = white;
+    this.black = black;
   }
 
+  _isSamePosition = ([row1, col1], [row2, col2]) =>
+    row1 === row2 && col1 === col2;
+
+  _isOnBoard = ([row, col]) => row >= 0 && row <= 7 && col >= 0 && col <= 7;
+
   toString() {
+    const { white, black } = this;
+
     let board = [];
 
     for (let i = 0; i < 8; i++) {
       let row = [];
       for (let j = 0; j < 8; j++) {
-        if (i === this.white[0] && j === this.white[1]) {
+        if (this._isSamePosition([i, j], white)) {
           row.push("W");
-        } else if (i === this.black[0] && j === this.black[1]) {
+        } else if (this._isSamePosition([i, j], black)) {
           row.push("B");
         } else {
           row.push("_");
@@ -26,17 +35,21 @@ class Queens {
       board.push(row);
     }
 
-    return board.join("\n") + "\n";
+    return board.join("\n");
   }
 
-  canAttack() {
+  get canAttack() {
+    const {
+      white: [whiteRow, whiteCol],
+      black: [blackRow, blackCol],
+    } = this;
+
     return (
-      this.white[0] === this.black[0] ||
-      this.white[1] === this.black[1] ||
-      Math.abs(this.white[0] - this.black[0]) ===
-        Math.abs(this.white[1] - this.black[1])
+      whiteRow === blackRow ||
+      whiteCol === blackCol ||
+      // to be diagonal, we have to move the same number of columns as rows
+      // we take the absolute value of each because we don't care about direction
+      Math.abs(whiteRow - blackRow) === Math.abs(whiteCol - blackCol)
     );
   }
 }
-
-export default Queens;
