@@ -1,9 +1,12 @@
-export const validate = input => {
-  const str = input.toString();
+// Convert number to a string, explode it into an array,
+// and convert each element back to a number
+const getExplodedDigits = number => [...number.toString()].map(Number);
 
-  let result = 0;
+export const isArmstrongNumber = number => {
+  const armstrongCalculationResult = getExplodedDigits(number).reduce(
+    (acc, n, _, digits) => acc + Math.pow(n, digits.length),
+    0
+  );
 
-  [...str].forEach(c => (result += Math.pow(c, str.length)));
-
-  return result === input;
+  return armstrongCalculationResult === number;
 };

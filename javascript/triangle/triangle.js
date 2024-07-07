@@ -1,30 +1,48 @@
-var Triangle = function (s1, s2, s3) {
-        this.s1 = s1;
-        this.s2 = s2; 
-        this.s3 = s3; 
-};
+export class Triangle {
+  constructor(s1, s2, s3) {
+    this.sides = [s1, s2, s3];
+  }
 
-Triangle.prototype.kind = function () {
-        if (this.s1 + this.s2 < this.s3 || 
-            this.s1 + this.s3 < this.s2 || 
-            this.s2 + this.s3 < this.s1) {
-                throw Error; 
-        }
+  #isValidTriangle() {
+    return (
+      this.sides.every(this.#sideHasPositiveLength) &&
+      this.sides.every(side =>
+        this.#sideIsShorterThanOtherTwoSidesCombined(side, this.#perimeter)
+      )
+    );
+  }
 
-        if (this.s1 == 0 || this.s2 == 0 || this.s3 == 0) {
-                throw Error; 
-        }
+  #sideHasPositiveLength(side) {
+    return side > 0;
+  }
 
+  #sideIsShorterThanOtherTwoSidesCombined(side, perimeter) {
+    return side < 0.5 * perimeter;
+  }
 
-        if (this.s1 == this.s2 && this.s2 == this.s3) {
-                return 'equilateral';
-        }
+  get #perimeter() {
+    return this.sides.reduce((acc, curr) => acc + curr, 0);
+  }
 
-        if (this.s1 == this.s2 || this.s2 == this.s3 || this.s1 == this.s3) {
-                return 'isosceles';
-        }
+  get #matchingSides() {
+    const setSize = new Set(this.sides).size;
+    if (setSize === 3) {
+      // we have three unique sides, so none match.
+      return 0;
+    } else {
+      return 4 - setSize;
+    }
+  }
 
-        return 'scalene';
-};
+  get isEquilateral() {
+    return this.#isValidTriangle() && this.#matchingSides === 3;
+  }
 
-module.exports = Triangle; 
+  get isIsosceles() {
+    return this.#isValidTriangle() && this.#matchingSides >= 2;
+  }
+
+  get isScalene() {
+    return this.#isValidTriangle() && this.#matchingSides === 0;
+  }
+}

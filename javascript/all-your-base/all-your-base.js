@@ -1,51 +1,50 @@
-const isValidBase = base => {
-  return Number.isInteger(base) && base >= 2;
-};
+const isValidBase = base => Number.isInteger(base) && base >= 2;
 
-const isValidInputArray = (array, currBase) => {
-  return (
-    array.length >= 1 &&
-    array.every(elem => elem >= 0 && elem < currBase) &&
-    (array.length === 1 || array[0] !== 0)
-  );
-};
+const numberIsNotEmpty = explodedNumber => explodedNumber.length !== 0;
 
-const convertToBaseTen = (array, currBase) => {
-  let asInteger = 0;
+const digitsAreAllValidInBase = (explodedNumber, base) =>
+  explodedNumber.every(n => n >= 0 && n < base);
 
-  array.forEach(digit => {
-    asInteger = asInteger * currBase + digit;
-  });
+const numberHasNoLeadingZeros = explodedNumber =>
+  // first digit can be zero only if it's the only digit
+  explodedNumber.length === 1 || explodedNumber[0] !== 0;
 
-  return asInteger;
-};
+const isValidExplodedNumber = (explodedNumber, base) =>
+  numberIsNotEmpty(explodedNumber) &&
+  digitsAreAllValidInBase(explodedNumber, base) &&
+  numberHasNoLeadingZeros(explodedNumber);
 
-const convertIntegerToBase = (integer, newBase) => {
-  let mutableCopy = integer;
+const convertToBaseTen = (explodedNumber, currBase) =>
+  explodedNumber.reduce((acc, curr) => acc * currBase + curr);
+
+const convertToNewBase = (num, newBase) => {
+  let remainder = num;
   const result = [];
 
   do {
-    result.unshift(mutableCopy % newBase);
-    mutableCopy = Math.floor(mutableCopy / newBase);
-  } while (mutableCopy > 0);
+    result.unshift(remainder % newBase);
+    remainder = Math.floor(remainder / newBase);
+  } while (remainder > 0);
 
   return result;
 };
 
-export const convert = (array, currBase, newBase) => {
+// [1, 0, 1]
+
+export const convert = (explodedNumber, currBase, newBase) => {
   if (!isValidBase(currBase)) {
-    throw new Error('Wrong input base');
+    throw new Error("Wrong input base");
   }
 
   if (!isValidBase(newBase)) {
-    throw new Error('Wrong output base');
+    throw new Error("Wrong output base");
   }
 
-  if (!isValidInputArray(array, currBase)) {
-    throw new Error('Input has wrong format');
+  if (!isValidExplodedNumber(explodedNumber, currBase)) {
+    throw new Error("Input has wrong format");
   }
 
-  const asInteger = convertToBaseTen(array, currBase);
+  const baseTenNumber = convertToBaseTen(explodedNumber, currBase);
 
-  return convertIntegerToBase(asInteger, newBase);
+  return convertToNewBase(baseTenNumber, newBase);
 };

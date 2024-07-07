@@ -1,11 +1,13 @@
-export const transform = old => {
-  const result = {};
+const getLetterMapForScore = ([score, letters]) =>
+  Object.fromEntries(
+    letters.map(letter => [letter.toLowerCase(), Number(score)])
+  );
 
-  Object.keys(old).forEach(key => {
-    old[key].forEach(letter => {
-      result[letter.toLowerCase()] = parseInt(key, 10);
-    });
-  });
-
-  return result;
-};
+export const transform = old =>
+  Object.entries(old).reduce(
+    (acc, entry) => ({
+      ...acc,
+      ...getLetterMapForScore(entry),
+    }),
+    {}
+  );

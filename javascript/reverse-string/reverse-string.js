@@ -1,3 +1,1 @@
-export const reverseString = input => {
-  return [...input].reduce((acc, char) => char + acc, "");
-};
+export const reverseString = input => [...input].reverse().join("");
